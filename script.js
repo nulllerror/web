@@ -2,10 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Typewriter Effect ---
     const typewriterEl = document.getElementById('typewriter');
     const phrases = [
-        "Building the future of the web.",
-        "CS Student @ Tech University.",
+        "CS Student @ Babcock University.",
         "Passionate about AI & Systems.",
-        "Creating pixel-perfect experiences."
+        "Aspiring SWE"
     ];
     let phraseIdx = 0;
     let charIdx = 0;
