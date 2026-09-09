@@ -1,23 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Theme Toggle ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const themeIcon = themeToggle.querySelector('i');
-
-    const setTheme = (theme) => {
-        body.setAttribute('data-theme', theme);
-        themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        localStorage.setItem('theme', theme);
-    };
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = body.getAttribute('data-theme') || 'light';
-        setTheme(currentTheme === 'light' ? 'dark' : 'light');
-    });
-
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-
     // --- Typewriter Effect ---
     const typewriterEl = document.getElementById('typewriter');
     const phrases = [
