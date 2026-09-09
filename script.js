@@ -71,9 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Skills Generation ---
     const skills = [
-        'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js',
-        'Python', 'PyTorch', 'Rust', 'C++', 'Java', 'AWS', 'Docker',
-        'Kubernetes', 'PostgreSQL', 'MongoDB', 'GraphQL', 'Git', 'Linux'
+        'JavaScript', 'C', 'Python', 'Java', 'Git', 'Linux'
     ];
 
     const skillsCloud = document.getElementById('skills-cloud');
