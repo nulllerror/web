@@ -177,16 +177,16 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .hero-card {
     text-align: center;
-    padding: 80px 50px;
+    padding: 40px 30px;
     max-width: 800px;
 }
 
@@ -205,10 +205,11 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 15px;
     font-weight: 800;
     letter-spacing: -2px;
+    white-space: nowrap;
 }
 
 .subtitle {
@@ -271,15 +272,15 @@ body {
 
 /* About Section */
 .section {
-    padding: 120px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
     font-weight: 800;
     letter-spacing: -1px;
 }
@@ -460,7 +461,7 @@ body {
 /* Footer */
 footer {
     text-align: center;
-    padding: 80px 20px;
+    padding: 30px 20px;
     color: var(--text-muted);
 }
 
