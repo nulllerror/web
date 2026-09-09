@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Student | Ultra-Modern Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">CS<span class="text-blue">Student</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="glass-btn"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-card glass-card">
+                <div class="profile-img">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Profile Picture">
+                </div>
+                <h1 class="reveal">Hi, I'm <span class="text-blue">Alex</span> 👋</h1>
+                <p class="subtitle reveal">
+                    <span id="typewriter"></span><span class="cursor">|</span>
+                </p>
+                <div class="hero-btns reveal">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card glass-card reveal">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>The Developer</h3>
+                    <p>I turn complex problems into elegant, efficient code. Specializing in full-stack development and system architecture.</p>
+                </div>
+                <div class="about-card glass-card reveal">
+                    <div class="icon-box"><i class="fas fa-brain"></i></div>
+                    <h3>The Thinker</h3>
+                    <p>Deeply interested in AI, Distributed Systems, and the intersection of Human-Computer Interaction.</p>
+                </div>
+                <div class="about-card glass-card reveal">
+                    <div class="icon-box"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3>The Creative</h3>
+                    <p>Obsessed with pixel-perfect design and smooth animations that make users smile.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title reveal">Featured Work</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card reveal">
+                    <div class="project-image img-1"></div>
+                    <div class="project-info">
+                        <h3>Quantum Route</h3>
+                        <p>Next-gen pathfinding visualizer using advanced heuristics.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Canvas API</span><span>TS</span>
+                        </div>
+                        <a href="#" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image img-2"></div>
+                    <div class="project-info">
+                        <h3>CipherVault</h3>
+                        <p>Military-grade encrypted storage with zero-knowledge proof.</p>
+                        <div class="project-tags">
+                            <span>Rust</span><span>Wasm</span><span>AES-256</span>
+                        </div>
+                        <a href="#" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image img-3"></div>
+                    <div class="project-info">
+                        <h3>NeuralFlow</h3>
+                        <p>Real-time sentiment analysis engine for streaming data.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>PyTorch</span><span>Kafka</span>
+                        </div>
+                        <a href="#" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title reveal">Tech Stack</h2>
+            <div class="skills-container glass-card reveal">
+                <div class="skills-cloud" id="skills-cloud"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <div class="contact-container glass-card reveal">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alex. Crafted with precision & coffee.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
