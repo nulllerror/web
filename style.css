@@ -201,6 +201,13 @@ body {
 }
 
 
+.skills-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .skill-pill {
     padding: 12px 24px;
     background: var(--primary-color);
