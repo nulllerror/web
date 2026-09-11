@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     type();
 
-    // --- Parallax Background ---
     const blobs = document.querySelectorAll('.blob');
     window.addEventListener('mousemove', (e) => {
         const x = (e.clientX / window.innerWidth) - 0.5;
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Skills Generation ---
     const skills = [
         'JavaScript', 'C', 'Python', 'Java', 'Git', 'Linux'
     ];
@@ -62,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsCloud.appendChild(pill);
     });
 
-    // --- Scroll Reveal Animation ---
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
