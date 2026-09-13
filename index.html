@@ -4,16 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somto's website</title>
+    <title>Somtochukwu Emeka-Obi | Full Stack Developer</title>
+
+    <meta name="description" content="Portfolio of Somtochukwu Emeka-Obi, a CS student at Babcock University specializing in full-stack development and system architecture.">
+    <meta name="keywords" content="Somtochukwu Emeka-Obi, Full Stack Developer, CS Student, Babcock University, AI, Systems Architecture">
+    <meta name="author" content="Somtochukwu Emeka-Obi">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://somto.me/"> <!-- Placeholder URL -->
+    <meta property="og:title" content="Somtochukwu Emeka-Obi | Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Somtochukwu Emeka-Obi, a CS student at Babcock University specializing in full-stack development and system architecture.">
+    <meta property="og:image" content="thumbnail.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://somto.me/"> <!-- Placeholder URL -->
+    <meta property="twitter:title" content="Somtochukwu Emeka-Obi | Full Stack Developer">
+    <meta property="twitter:description" content="Portfolio of Somtochukwu Emeka-Obi, a CS student at Babcock University specializing in full-stack development and system architecture.">
+    <meta property="twitter:image" content="thumbnail.png">
 
     <link rel="icon" type="image/png" href="thumbnail.png">
     <link rel="apple-touch-icon" href="thumbnail.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body data-theme="light">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
     <div class="background-container">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -48,9 +73,22 @@
                     </div>
                 </div>
 
+                <div id="projects" class="section-box">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid" id="projects-grid"></div>
+                </div>
+
                 <div id="skills" class="section-box">
                     <h2 class="section-title">Skills</h2>
                     <div class="skills-cloud" id="skills-cloud"></div>
+                </div>
+
+                <div id="contact" class="section-box">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-card-inline">
+                        <p>I'm always open to collaborating on interesting projects or discussing system architecture. Feel free to reach out!</p>
+                        <a href="mailto:somto@example.com" class="contact-btn">Send an Email <i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
         </section>

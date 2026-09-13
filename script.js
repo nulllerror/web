@@ -1,42 +1,96 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Site Configuration ---
+    const SITE_CONFIG = {
+        typewriter: {
+            phrases: [
+                "CS Student @ Babcock University.",
+                "Passionate about AI & Systems.",
+                "Aspiring Software Engineer.",
+                "Full Stack Developer."
+            ],
+            typeSpeed: 100,
+            deleteSpeed: 50,
+            endPause: 2000,
+            startPause: 500
+        },
+        skills: [
+            'JavaScript', 'C', 'Python', 'Java', 'Git', 'Linux', 'React', 'Node.js', 'SQL'
+        ],
+        projects: [
+            {
+                title: 'Project One',
+                description: 'A comprehensive full-stack application built to solve X problem. Implements Y and Z.',
+                tags: ['React', 'Node.js', 'MongoDB'],
+                link: '#'
+            },
+            {
+                title: 'Project Two',
+                description: 'A high-performance system tool for optimizing W. Focused on efficiency and scalability.',
+                tags: ['C', 'Linux', 'Bash'],
+                link: '#'
+            },
+            {
+                title: 'Project Three',
+                description: 'An AI-powered agent that automates V. Integrated with LLMs for intelligent processing.',
+                tags: ['Python', 'PyTorch', 'FastAPI'],
+                link: '#'
+            }
+        ]
+    };
+
+    // --- Theme Management ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeIcon(theme);
+    });
+
+    function updateThemeIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
     // --- Typewriter Effect ---
     const typewriterEl = document.getElementById('typewriter');
-    const phrases = [
-        "CS Student @ Babcock University.",
-        "Passionate about AI & Systems.",
-        "Aspiring SWE"
-    ];
     let phraseIdx = 0;
     let charIdx = 0;
     let isDeleting = false;
-    let typeSpeed = 100;
+    let currentTypeSpeed = SITE_CONFIG.typewriter.typeSpeed;
 
     function type() {
-        const currentPhrase = phrases[phraseIdx];
+        const currentPhrase = SITE_CONFIG.typewriter.phrases[phraseIdx];
 
         if (isDeleting) {
             typewriterEl.textContent = currentPhrase.substring(0, charIdx - 1);
             charIdx--;
-            typeSpeed = 50;
+            currentTypeSpeed = SITE_CONFIG.typewriter.deleteSpeed;
         } else {
             typewriterEl.textContent = currentPhrase.substring(0, charIdx + 1);
             charIdx++;
-            typeSpeed = 100;
+            currentTypeSpeed = SITE_CONFIG.typewriter.typeSpeed;
         }
 
         if (!isDeleting && charIdx === currentPhrase.length) {
             isDeleting = true;
-            typeSpeed = 2000; // Pause at the end
+            currentTypeSpeed = SITE_CONFIG.typewriter.endPause;
         } else if (isDeleting && charIdx === 0) {
             isDeleting = false;
-            phraseIdx = (phraseIdx + 1) % phrases.length;
-            typeSpeed = 500;
+            phraseIdx = (phraseIdx + 1) % SITE_CONFIG.typewriter.phrases.length;
+            currentTypeSpeed = SITE_CONFIG.typewriter.startPause;
         }
 
-        setTimeout(type, typeSpeed);
+        setTimeout(type, currentTypeSpeed);
     }
     type();
 
+    // --- Background Blobs Interaction ---
     const blobs = document.querySelectorAll('.blob');
     window.addEventListener('mousemove', (e) => {
         const x = (e.clientX / window.innerWidth) - 0.5;
@@ -48,18 +102,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const skills = [
-        'JavaScript', 'C', 'Python', 'Java', 'Git', 'Linux'
-    ];
+    // --- Projects Rendering ---
+    const projectsGrid = document.getElementById('projects-grid');
+    SITE_CONFIG.projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.className = 'project-card glass-card reveal';
+        card.innerHTML = `
+            <h3 class="project-title">${proj.title}</h3>
+            <p class="project-desc">${proj.description}</p>
+            <div class="project-tags">
+                ${proj.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <a href="${proj.link}" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+        `;
+        projectsGrid.appendChild(card);
+    });
 
+    // --- Skills Cloud ---
     const skillsCloud = document.getElementById('skills-cloud');
-    skills.forEach(skill => {
+    SITE_CONFIG.skills.forEach(skill => {
         const pill = document.createElement('div');
         pill.className = 'skill-pill';
         pill.textContent = skill;
         skillsCloud.appendChild(pill);
     });
 
+    // --- Reveal Animation ---
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
