@@ -3,10 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const SITE_CONFIG = {
         typewriter: {
             phrases: [
-                "CS Student @ Babcock University.",
-                "Passionate about AI & Systems.",
-                "Aspiring Software Engineer.",
-                "Full Stack Developer."
+                "aspiring SWE",
+                "3rd year student",
+                "passionate for AI"
             ],
             typeSpeed: 100,
             deleteSpeed: 50,
@@ -18,21 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         projects: [
             {
-                title: 'Project One',
-                description: 'A comprehensive full-stack application built to solve X problem. Implements Y and Z.',
-                tags: ['React', 'Node.js', 'MongoDB'],
-                link: '#'
-            },
-            {
-                title: 'Project Two',
-                description: 'A high-performance system tool for optimizing W. Focused on efficiency and scalability.',
-                tags: ['C', 'Linux', 'Bash'],
-                link: '#'
-            },
-            {
-                title: 'Project Three',
-                description: 'An AI-powered agent that automates V. Integrated with LLMs for intelligent processing.',
-                tags: ['Python', 'PyTorch', 'FastAPI'],
+                title: 'Unix Shell',
+                description: 'A unix shell written in C',
+                tags: ['C', 'Unix'],
                 link: '#'
             }
         ]
