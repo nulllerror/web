@@ -1,5 +1,4 @@
 :root {
-    /* Light Mode Palette */
     --bg-color: #ffffff;
     --text-main: #0056b3;
     --text-muted: #6c757d;
@@ -21,7 +20,6 @@
 }
 
 [data-theme="dark"] {
-    /* Dark Mode Palette (Slate 900 based) */
     --bg-color: #0f172a;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
@@ -49,7 +47,6 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* High-End Background */
 .background-container {
     position: fixed;
     top: 0;
@@ -118,7 +115,6 @@ body {
     100% { transform: translate(10vw, 10vh) scale(1.2); }
 }
 
-/* Glassmorphism + iOS Radius */
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(25px);
@@ -135,7 +131,6 @@ body {
     border-color: var(--secondary-color);
 }
 
-/* Layout */
 .main-layout {
     display: flex;
     min-height: 100vh;
@@ -274,7 +269,6 @@ body {
     50% { opacity: 0; }
 }
 
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -335,7 +329,6 @@ body {
     transform: translateX(5px);
 }
 
-/* Contact Section */
 .contact-card-inline {
     display: flex;
     flex-direction: column;
@@ -364,7 +357,6 @@ body {
     box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
 }
 
-/* Animations */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -376,7 +368,6 @@ body {
     transform: translateY(0);
 }
 
-/* Theme Toggle */
 .theme-toggle {
     position: fixed;
     top: 30px;
@@ -403,7 +394,6 @@ body {
     border-color: var(--secondary-color);
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
     .main-layout {
         flex-direction: column;

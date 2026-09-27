@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Site Configuration ---
     const SITE_CONFIG = {
         typewriter: {
             phrases: [
@@ -21,11 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: 'A unix shell written in C',
                 tags: ['C', 'Unix'],
                 link: '#'
+            },
+            {
+                title: 'Ai powered text summarizer',
+                description: 'A streamlit webapp summary tool that summarizes pasted text or text from a pdf through a fine tuned BART model',
+                tags: ['Python', 'Streamlit', 'HuggingFace'],
+                link: 'https://github.com/nulllerror/ai-summarizer'
             }
         ]
     };
 
-    // --- Theme Management ---
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
 
@@ -44,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
 
-    // --- Typewriter Effect ---
     const typewriterEl = document.getElementById('typewriter');
     let phraseIdx = 0;
     let charIdx = 0;
@@ -77,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     type();
 
-    // --- Background Blobs Interaction ---
     const blobs = document.querySelectorAll('.blob');
     window.addEventListener('mousemove', (e) => {
         const x = (e.clientX / window.innerWidth) - 0.5;
@@ -89,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Projects Rendering ---
     const projectsGrid = document.getElementById('projects-grid');
     SITE_CONFIG.projects.forEach(proj => {
         const card = document.createElement('div');
@@ -105,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsGrid.appendChild(card);
     });
 
-    // --- Skills Cloud ---
     const skillsCloud = document.getElementById('skills-cloud');
     SITE_CONFIG.skills.forEach(skill => {
         const pill = document.createElement('div');
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsCloud.appendChild(pill);
     });
 
-    // --- Reveal Animation ---
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
