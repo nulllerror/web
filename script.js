@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
       phrases: [
         "aspiring SWE",
         "3rd year student",
-        "passionate for AI"
       ],
       typeSpeed: 100,
       deleteSpeed: 50,
