@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     projects: [
       {
-        title: 'Unix Shell',
-        description: 'A unix shell written in C',
-        tags: ['C', 'Unix'],
-        link: '#'
+        title: 'AI Resume parser',
+        description: 'NLP-Powered parser that converts unstructured resume data into structured data using pandas',
+        tags: ['Python', 'Pandas', 'SpaCy NLPs'],
+        link: 'https://github.com/nulllerror/resumeanalysis'
       },
       {
         title: 'Ai powered text summarizer',
